@@ -5,10 +5,7 @@ body {
     color: #ffc2d1; /* Romantic pink */
     text-align: center;
     overflow: hidden;
-}
-
-.hidden {
-    display: none;
+    padding: 0;
 }
 
 /* Background Video */
@@ -89,6 +86,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Adjust to center the images and quotes */
+    padding: 0 10px; /* Adds padding to prevent images from touching edges */
 }
 
 .slide {
@@ -96,17 +95,72 @@ body {
 }
 
 .slide img {
-    max-width: 90%; /* Adjusts the width to fit within 90% of the screen width */
-    max-height: 80vh; /* Adjusts the height to fit within 80% of the viewport height */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    max-width: 100%; /* Adjust to fit within 100% of the screen width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    margin: auto; /* Centers the image horizontally */
+    margin: 20px 0; /* Added margin for spacing */
 }
 
 .quote {
     font-size: 1.2em;
     color: #ffc2d1;
     margin-top: 10px;
+    padding: 0 15px; /* Added padding for spacing */
+}
+
+/* Media Queries for Mobile Compatibility */
+@media (max-width: 768px) {
+    /* Scale down the text for smaller devices */
+    body {
+        font-size: 1.2em;
+    }
+
+    /* Adjust intro message font size */
+    #intro-container h1 {
+        font-size: 1.5em;
+    }
+
+    /* Adjust poem font size */
+    #poem-container p {
+        font-size: 1.3em;
+    }
+
+    /* Adjust the slideshow image size */
+    .slide img {
+        max-width: 100%; /* Ensures images are fully responsive */
+        height: auto;
+    }
+
+    /* Adjust the font size of quotes for smaller screens */
+    .quote {
+        font-size: 1em;
+    }
+
+    /* Increase the font size of the start button */
+    #start-button {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjust for very small screens */
+    #intro-container h1 {
+        font-size: 1.2em;
+    }
+
+    #poem-container p {
+        font-size: 1.1em;
+    }
+
+    .quote {
+        font-size: 0.9em;
+    }
+
+    /* Adjust the start button font size further for very small screens */
+    #start-button {
+        font-size: 1em;
+    }
 }
