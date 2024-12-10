@@ -130,9 +130,15 @@ body {
 .quote {
     max-width: 45%; /* Quotes take 45% of the width */
     font-size: 1em; /* Smaller font size for better fit */
-    color: #ffc2d1; /* Romantic pink for all quotes */
     text-align: left; /* Align text to the left */
     padding: 10px;
     box-sizing: border-box;
     word-wrap: break-word;
+    color: #8b0000; /* Default dark red */
+}
+
+/* Pink Text for 2nd and Last Slide */
+#slideshow-container .slide:nth-child(2) .quote,
+#slideshow-container .slide:last-child .quote {
+    color: #ffc2d1; /* Romantic pink */
 }
