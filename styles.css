@@ -112,6 +112,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 20px; /* Added margin to create gap at the top */
 }
 
 .slide img {
