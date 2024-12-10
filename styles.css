@@ -113,8 +113,8 @@ body {
 }
 
 .slide img {
-    max-width: 90%; /* Makes the image fit within the viewport */
-    max-height: 50vh; /* Limits height to prevent overflow */
+    max-width: 80%; /* Further reduces the width */
+    max-height: 40vh; /* Adjusts the height to prevent overflow */
     height: auto; /* Maintains aspect ratio */
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
@@ -129,7 +129,7 @@ body {
     padding: 0 10px;
     word-wrap: break-word;
     text-align: center;
-    width: 100%; /* Ensures the quote stays within the bounds of the screen */
+    width: 90%; /* Ensures the quote stays within the bounds of the screen */
     box-sizing: border-box;
 }
 
