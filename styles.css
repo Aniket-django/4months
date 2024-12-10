@@ -5,7 +5,7 @@ body {
     font-family: 'Georgia', serif;
     color: #ffc2d1; /* Romantic pink */
     text-align: center;
-    overflow: hidden; /* Prevents both horizontal and vertical scrolling */
+    overflow: hidden; /* Prevents scrolling */
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
     box-sizing: border-box;
@@ -107,26 +107,24 @@ body {
     max-width: 90%; /* Limits the width of the image */
     height: auto;
     margin: auto;
-    padding-top: 20px; /* Adds padding to the top to center the images */
+    padding-top: 10vh; /* Adds padding to center images vertically */
+    text-align: center; /* Ensures content aligns with the image */
 }
 
 .slide img {
-    width: 100%;
+    width: 90%; /* Makes the image fit within the viewport */
     height: auto; /* Ensures the image maintains its aspect ratio */
-    max-height: 70vh; /* Adjusts the height to fit within 70% of the viewport */
+    max-height: 60vh; /* Adjusts the height to fit within 60% of the viewport */
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     object-fit: cover;
+    margin-bottom: 15px; /* Adds gap between the image and quote */
 }
 
 .quote {
-    position: absolute;
-    bottom: 15px; /* Positioned at the bottom of the image */
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 1.1em;
-    color: #ffc2d1;
+    color: #ffc2d1; /* Default romantic pink */
     padding: 0 10px;
     word-wrap: break-word;
     text-align: center;
