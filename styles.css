@@ -107,6 +107,7 @@ body {
     max-width: 90%; /* Limits the width of the image */
     height: auto;
     margin: auto;
+    padding-top: 20px; /* Adds padding to the top to center the images */
 }
 
 .slide img {
@@ -133,8 +134,8 @@ body {
     box-sizing: border-box;
 }
 
-/* Dark Red Text for Slide 2 and 5 */
+/* Dark Red Text for Slide 2 and 6 */
 #slideshow-container .slide:nth-child(2) .quote,
-#slideshow-container .slide:nth-child(5) .quote {
+#slideshow-container .slide:nth-child(6) .quote {
     color: #8b0000; /* Dark Red */
 }
