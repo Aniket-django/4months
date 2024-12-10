@@ -6,6 +6,7 @@ body {
     text-align: center;
     overflow: hidden;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Background Video */
@@ -43,8 +44,8 @@ body {
 }
 
 #start-button {
-    font-size: 1.5em;
-    padding: 15px 30px;
+    font-size: 1.2em; /* Adjusted for smaller screens */
+    padding: 12px 25px;
     background-color: #d6336c;
     color: #fff;
     border: none;
@@ -65,8 +66,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8em;
+    font-size: 1.5em; /* Adjusted for better visibility on small screens */
     color: #ffc2d1;
+    padding: 0 10px; /* Prevents text from touching screen edges */
 }
 
 /* Poem */
@@ -75,9 +77,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-style: italic;
     color: #ffc2d1;
+    padding: 0 10px;
 }
 
 /* Slideshow */
@@ -86,8 +89,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Adjust to center the images and quotes */
-    padding: 0 10px; /* Adds padding to prevent images from touching edges */
+    flex-direction: column;
+    padding: 0 10px; /* Prevents images from touching screen edges */
 }
 
 .slide {
@@ -95,72 +98,74 @@ body {
 }
 
 .slide img {
-    max-width: 100%; /* Ensures images are fully responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 90%; /* Makes sure the image is responsive */
+    height: auto;
     object-fit: contain;
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    margin: 20px 0; /* Added margin for spacing */
+    margin: 20px 0; /* Spacing between images */
 }
 
 .quote {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Slightly smaller quote text */
     color: #ffc2d1;
     margin-top: 10px;
-    padding: 0 15px; /* Added padding for spacing */
+    padding: 0 15px; /* Padding to ensure quotes are not too close to the edges */
 }
 
 /* Media Queries for Mobile Compatibility */
 @media (max-width: 768px) {
-    /* Scale down the text for smaller devices */
     body {
-        font-size: 1.2em;
+        font-size: 1em; /* Smaller font size for better readability */
     }
 
-    /* Adjust intro message font size */
     #intro-container h1 {
-        font-size: 1.5em;
+        font-size: 1.3em; /* Adjusts the intro text */
     }
 
-    /* Adjust poem font size */
     #poem-container p {
-        font-size: 1.3em;
+        font-size: 1.2em; /* Adjusts the poem text */
     }
 
-    /* Adjust the slideshow image size */
-    .slide img {
-        max-width: 100%; /* Ensures images are fully responsive */
-        height: auto;
-    }
-
-    /* Adjust the font size of quotes for smaller screens */
     .quote {
-        font-size: 1em;
+        font-size: 1em; /* Adjusts the quote size */
     }
 
-    /* Increase the font size of the start button */
+    /* Adjusts the start button font size for smaller screens */
     #start-button {
         font-size: 1.2em;
+    }
+
+    /* Ensure images take up 90% of the screen width on tablets */
+    .slide img {
+        max-width: 90%;
+        height: auto;
     }
 }
 
 @media (max-width: 480px) {
-    /* Further adjust for very small screens */
+    /* For very small screens (smartphones) */
     #intro-container h1 {
-        font-size: 1.2em;
+        font-size: 1.1em; /* Slightly smaller intro message */
     }
 
     #poem-container p {
-        font-size: 1.1em;
+        font-size: 1.1em; /* Slightly smaller poem text */
     }
 
     .quote {
-        font-size: 0.9em;
+        font-size: 0.9em; /* Smaller quote text */
     }
 
-    /* Adjust the start button font size further for very small screens */
+    /* Smaller start button on mobile */
     #start-button {
-        font-size: 1em;
+        font-size: 1.1em;
+    }
+
+    /* Ensure images take up 80% of the screen width */
+    .slide img {
+        max-width: 80%;
+        height: auto;
     }
 }
