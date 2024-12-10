@@ -68,7 +68,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2em; /* Reduced font size */
+    font-size: 1.2em; /* Adjusted font size for mobile */
     color: #ffc2d1;
     padding: 0 15px;
     box-sizing: border-box;
@@ -111,21 +111,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .slide img {
     width: 100%;
-    height: auto; /* Ensures the image maintains its aspect ratio */
-    max-height: 70vh; /* Adjusts the height to fit within 70% of the viewport */
+    max-width: 90%; /* Image width limited to 90% of the viewport */
+    height: auto;
+    max-height: 70vh; /* Maximum height limited to 70% of the viewport */
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
+    object-fit: contain; /* Maintains aspect ratio */
 }
 
 .quote {
     position: absolute;
-    bottom: 15px; /* Positioned at the bottom of the image */
+    bottom: 10%; /* Positioned at the bottom of the image */
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.1em;
@@ -141,4 +143,21 @@ body {
 #slideshow-container .slide:nth-child(2) .quote,
 #slideshow-container .slide:nth-child(5) .quote {
     color: #8b0000; /* Dark Red */
+}
+
+/* Additional Mobile-Specific Adjustments */
+@media screen and (max-width: 768px) {
+    #intro-container h1 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+        padding: 0 20px; /* Added padding for mobile */
+    }
+
+    .slide img {
+        max-width: 100%; /* Allow images to fit within the screen */
+        max-height: 60vh; /* Adjust image height */
+    }
+
+    .quote {
+        font-size: 1em; /* Adjust font size of quotes for smaller screens */
+    }
 }
