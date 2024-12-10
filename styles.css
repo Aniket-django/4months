@@ -108,8 +108,10 @@ body {
     max-width: 90%; /* Limits the width of the image */
     height: auto;
     margin: 0 auto; /* Ensures image is centered horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 20px; /* Added margin to create gap at the top */
 }
 
 .slide img {
