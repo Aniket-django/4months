@@ -95,7 +95,7 @@ body {
 }
 
 .slide img {
-    max-width: 100%; /* Adjust to fit within 100% of the screen width */
+    max-width: 100%; /* Ensures images are fully responsive */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain;
     border: 10px solid #ffc2d1; /* Romantic pink border */
