@@ -68,7 +68,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.2em; /* Reduced font size */
     color: #ffc2d1;
     padding: 0 15px;
     box-sizing: border-box;
@@ -130,4 +130,10 @@ body {
     text-align: center;
     width: 100%; /* Ensures the quote stays within the bounds of the screen */
     box-sizing: border-box;
+}
+
+/* Dark Red Text for Slide 2 and 5 */
+#slideshow-container .slide:nth-child(2) .quote,
+#slideshow-container .slide:nth-child(5) .quote {
+    color: #8b0000; /* Dark Red */
 }
