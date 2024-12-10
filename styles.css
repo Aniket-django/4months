@@ -134,7 +134,8 @@ body {
 }
 
 /* Dark Red Text for 2nd and Last Slide */
+/* Dark Red Text for 2nd and Last Slide (Changed to Light Romantic Pink) */
 #slideshow-container .slide:nth-child(2) .quote,
 #slideshow-container .slide:last-child .quote {
-    color: ##db65aa; /* Dark Red */
+    color: #ffc2d1; /* Light Romantic Pink */
 }
