@@ -98,7 +98,6 @@ body {
     padding: 0 15px;
     box-sizing: border-box;
     width: 100%;
-    height: 100vh; /* Ensures slideshow takes full viewport height */
 }
 
 .slide {
@@ -107,10 +106,7 @@ body {
     width: 100%;
     max-width: 90%; /* Limits the width of the image */
     height: auto;
-    margin: 0 auto; /* Ensures image is centered horizontally */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 }
 
 .slide img {
