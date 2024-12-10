@@ -99,24 +99,33 @@ body {
 .slide {
     display: none;
     width: 100%;
+    position: relative; /* Ensures quotes are positioned relative to the image */
 }
 
 .slide img {
-    max-width: 100%; /* Makes sure the image doesn't exceed screen width */
+    max-width: 85%; /* Ensures the images are smaller */
     height: auto;
     object-fit: contain;
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     margin: 20px 0; /* Spacing between images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .quote {
+    position: absolute;
+    bottom: 10px; /* Shifts the quote to the bottom */
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.1em; /* Adjusted for readability */
     color: #ffc2d1;
     margin-top: 10px;
     padding: 0 15px; /* Padding to ensure quotes are not too close to the edges */
     word-wrap: break-word; /* Prevents long words from overflowing */
+    text-align: center; /* Ensures the quote is centered */
 }
 
 /* Media Queries for Mobile Compatibility */
@@ -137,9 +146,9 @@ body {
         font-size: 1em; /* Adjusts the quote size */
     }
 
-    /* Ensure images take up 90% of the screen width on tablets */
+    /* Ensure images take up 80% of the screen width on tablets */
     .slide img {
-        max-width: 90%;
+        max-width: 80%;
         height: auto;
     }
 }
@@ -163,9 +172,9 @@ body {
         font-size: 1.1em;
     }
 
-    /* Ensure images take up 80% of the screen width */
+    /* Ensure images take up 75% of the screen width */
     .slide img {
-        max-width: 80%;
+        max-width: 75%;
         height: auto;
     }
 
