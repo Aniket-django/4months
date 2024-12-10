@@ -102,27 +102,28 @@ body {
 
 .slide {
     display: none;
-    position: relative;
-    width: 100%;
-    max-width: 90%; /* Limits the width of the image */
-    height: auto;
-    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding-top: 10vh; /* Adds space above images */
-    text-align: center; /* Ensures content aligns with the image */
+    width: 100%;
+    height: 80vh; /* Ensure it fits within the viewport */
+    box-sizing: border-box;
 }
 
 .slide img {
-    width: 90%; /* Makes the image fit within the viewport */
-    height: auto; /* Ensures the image maintains its aspect ratio */
-    max-height: 60vh; /* Adjusts the height to fit within 60% of the viewport */
+    max-width: 90%; /* Makes the image fit within the viewport */
+    max-height: 50vh; /* Limits height to prevent overflow */
+    height: auto; /* Maintains aspect ratio */
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
-    margin-bottom: 15px; /* Adds gap between the image and quote */
+    margin: 0 auto; /* Centers image horizontally */
 }
 
 .quote {
+    margin-top: 15px; /* Adds space between image and quote */
     font-size: 1.1em;
     color: #ffc2d1; /* Default romantic pink */
     padding: 0 10px;
