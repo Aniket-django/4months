@@ -1,11 +1,13 @@
 /* General Styles */
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Georgia', serif;
     color: #ffc2d1; /* Romantic pink */
     text-align: center;
-    overflow: hidden;
-    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
     box-sizing: border-box;
 }
 
@@ -44,7 +46,7 @@ body {
 }
 
 #start-button {
-    font-size: 1.2em; /* Adjusted for smaller screens */
+    font-size: 1.2em;
     padding: 12px 25px;
     background-color: #d6336c;
     color: #fff;
@@ -66,10 +68,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em; /* Adjusted for better visibility on small screens */
+    font-size: 1.5em;
     color: #ffc2d1;
-    padding: 0 10px; /* Prevents text from touching screen edges */
+    padding: 0 15px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* Poem */
@@ -81,105 +84,50 @@ body {
     font-size: 1.3em;
     font-style: italic;
     color: #ffc2d1;
-    padding: 0 10px;
+    padding: 0 15px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* Slideshow */
 #slideshow-container {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10px; /* Prevents images from touching screen edges */
+    padding: 0 15px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .slide {
     display: none;
+    position: relative;
     width: 100%;
-    position: relative; /* Ensures quotes are positioned relative to the image */
+    max-width: 90%; /* Limits the width of the image */
+    height: auto;
+    margin: auto;
 }
 
 .slide img {
-    max-width: 85%; /* Ensures the images are smaller */
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+    max-height: 70vh; /* Adjusts the height to fit within 70% of the viewport */
     border: 10px solid #ffc2d1; /* Romantic pink border */
     border-radius: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    margin: 20px 0; /* Spacing between images */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .quote {
     position: absolute;
-    bottom: 10px; /* Shifts the quote to the bottom */
+    bottom: 15px; /* Positioned at the bottom of the image */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.1em; /* Adjusted for readability */
+    font-size: 1.1em;
     color: #ffc2d1;
-    margin-top: 10px;
-    padding: 0 15px; /* Padding to ensure quotes are not too close to the edges */
-    word-wrap: break-word; /* Prevents long words from overflowing */
-    text-align: center; /* Ensures the quote is centered */
-}
-
-/* Media Queries for Mobile Compatibility */
-@media (max-width: 768px) {
-    body {
-        font-size: 1em; /* Smaller font size for better readability */
-    }
-
-    #intro-container h1 {
-        font-size: 1.3em; /* Adjusts the intro text */
-    }
-
-    #poem-container p {
-        font-size: 1.2em; /* Adjusts the poem text */
-    }
-
-    .quote {
-        font-size: 1em; /* Adjusts the quote size */
-    }
-
-    /* Ensure images take up 80% of the screen width on tablets */
-    .slide img {
-        max-width: 80%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    /* For very small screens (smartphones) */
-    #intro-container h1 {
-        font-size: 1.1em; /* Slightly smaller intro message */
-    }
-
-    #poem-container p {
-        font-size: 1.1em; /* Slightly smaller poem text */
-    }
-
-    .quote {
-        font-size: 0.9em; /* Smaller quote text */
-    }
-
-    /* Smaller start button on mobile */
-    #start-button {
-        font-size: 1.1em;
-    }
-
-    /* Ensure images take up 75% of the screen width */
-    .slide img {
-        max-width: 75%;
-        height: auto;
-    }
-
-    /* Prevent horizontal scrolling */
-    body, html {
-        overflow-x: hidden;
-    }
+    padding: 0 10px;
+    word-wrap: break-word;
+    text-align: center;
+    width: 100%; /* Ensures the quote stays within the bounds of the screen */
+    box-sizing: border-box;
 }
