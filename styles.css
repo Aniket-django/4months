@@ -125,7 +125,6 @@ body {
     object-fit: contain; /* Maintains aspect ratio */
 }
 
-/* Quotes at the Bottom of Image */
 .quote {
     position: absolute;
     bottom: 10%; /* Positioned at the bottom of the image */
@@ -140,9 +139,9 @@ body {
     box-sizing: border-box;
 }
 
-/* Dark Red Text for Slide 2 and 6 */
+/* Dark Red Text for Slide 2 and 5 */
 #slideshow-container .slide:nth-child(2) .quote,
-#slideshow-container .slide:nth-child(6) .quote {
+#slideshow-container .slide:nth-child(5) .quote {
     color: #8b0000; /* Dark Red */
 }
 
